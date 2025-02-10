@@ -6,202 +6,413 @@
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
     <title>Machismo Mata Mujeres</title>
-
-    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- import the webpage's javascript file -->
     <script src="script.js" defer></script>
-
-    <!-- import a font from google fonts     -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Teko:wght@300;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes menuOptionsOne {
+        0% {
+          transform: scale(100%);
+        }
+        20% {
+          transform: scale(101%);
+        }
+        50% {
+          transform: scale(102%);
+        }
+        70% {
+          transform: scale(101%);
+        }
+        100% {
+          transform: scale(100%);
+        }
+      }
+
+      @keyframes menuOptionsThree {
+        0% {
+          transform: scale(102%);
+        }
+        30% {
+          transform: scale(100%);
+        }
+        60% {
+          transform: scale(103%);
+        }
+        100% {
+          transform: scale(102%);
+        }
+      }
+
+      @keyframes menuOptionsFour {
+        0% {
+          transform: scale(102%);
+        }
+        30% {
+          transform: scale(100%);
+        }
+        60% {
+          transform: scale(103%);
+        }
+        100% {
+          transform: scale(102%);
+        }
+      }
+
+      @keyframes menuOptionsFive {
+        0% {
+          transform: scale(102%);
+        }
+        30% {
+          transform: scale(100%);
+        }
+        60% {
+          transform: scale(103%);
+        }
+        100% {
+          transform: scale(102%);
+        }
+      }
+
+      @keyframes quoteOptions2 {
+        0% {
+          transform: scale(100%);
+          transform: rotate(-5deg);
+        }
+        20% {
+          transform: scale(101%);
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: scale(102%);
+          transform: rotate(-5deg);
+        }
+        70% {
+          transform: scale(101%);
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: scale(100%);
+          transform: rotate(-5deg);
+        }
+      }
+
+      @keyframes quoteOptions {
+        0% {
+          transform: scale(100%);
+          transform: rotate(5deg);
+        }
+        20% {
+          transform: scale(101%);
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: scale(102%);
+          transform: rotate(5deg);
+        }
+        70% {
+          transform: scale(101%);
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: scale(100%);
+          transform: rotate(5deg);
+        }
+      }
+
+      @keyframes quoteOptions2 {
+        0% {
+          transform: scale(100%);
+          transform: rotate(-5deg);
+        }
+        20% {
+          transform: scale(101%);
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: scale(102%);
+          transform: rotate(-5deg);
+        }
+        70% {
+          transform: scale(101%);
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: scale(100%);
+          transform: rotate(-5deg);
+        }
+      }
+
+      #machismoDiv {
+        animation: menuOptionsOne 2s infinite;
+      }
+
+      #misoginiaDiv {
+        animation: menuOptionsThree 2.5s infinite;
+      }
+
+      #mataDiv {
+        animation: menuOptionsOne 3s infinite;
+      }
+
+      #mujeresDiv {
+        animation: menuOptionsThree 2.3s infinite;
+      }
+
+      .animate-quoteOptions {
+        animation: quoteOptions 3s infinite;
+      }
+
+      .animate-quoteOptions2 {
+        animation: quoteOptions2 3s infinite;
+      }
+
+      .animate-menuOptions {
+        animation: menuOptionsFour 2.5s infinite;
+      }
+
+      .animate-menuOptions2 {
+        animation: menuOptionsFive 2.5s infinite;
+      }
+
+      @media screen and (min-width: 1080px) {
+        .header {
+          margin: 0 auto;
+          display: flex;
+          width: 90vw;
+          height: 10vh;
+          /*   background: blue; */
+        }
+
+        #logo {
+          width: 10px;
+          height: 6vh;
+          background: red;
+          margin: 2vh auto;
+        }
+
+        #logo::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 6vh;
+          background: red;
+          transform: rotate(60deg);
+        }
+
+        #logo::after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 6vh;
+          background: red;
+          transform: rotate(125deg);
+        }
+
+        @keyframes logoAnimation {
+          0% {
+            transform: rotate(0deg);
+          }
+          10% {
+            transform: rotate(18deg);
+          }
+          20% {
+            transform: rotate(36deg);
+          }
+          30% {
+            transform: rotate(54deg);
+          }
+          40% {
+            transform: rotate(72deg);
+          }
+          50% {
+            transform: rotate(90deg);
+          }
+          60% {
+            transform: rotate(108deg);
+          }
+          70% {
+            transform: rotate(126deg);
+          }
+          80% {
+            transform: rotate(144deg);
+          }
+          90% {
+            transform: rotate(162deg);
+          }
+          100% {
+            transform: rotate(180deg);
+          }
+        }
+
+        #logo:hover {
+          animation: logoAnimation 0.5s infinite ease-in-out;
+          cursor: pointer;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- this is the start of content -->
     <div class="header">
       <div id="logo"></div>
     </div>
 
-    <div class="container">
-      <div class="menuContainer">
-        <div class="menu">
-          <div class="title" id="machismoDiv">MACHISMO</div>
-          <div id="back">back / atras<br /></div>
-          <div id="machismoMessage">
-            <p class="message">
+    <div
+      class="max-w-7xl mx-auto my-[2vh] flex flex-col lg:flex-row justify-center"
+    >
+      <div
+        class="w-[90vw] lg:w-[40vw] max-w-[600px] lg:ml-[1vw] xl:ml-[4vw] mx-auto"
+      >
+        <div
+          class="sticky top-[10vh] h-[80vh] z-10 w-[80vw] lg:w-[40vw] max-w-[600px] mt-[5vh]"
+        >
+          <div
+            class="text-[84px] font-['Teko'] text-left font-black hover:scale-[1.02] hover:text-[#bf281d] transition-all duration-200 cursor-pointer"
+            id="machismoDiv"
+          >
+            MACHISMO
+          </div>
+
+          <div
+            class="h-[4vh] w-[30vw] md:w-[7.5vw] text-[32px] text-black bg-red-600 text-left cursor-pointer mb-[2vh]"
+            id="back"
+          >
+            back / atras<br />
+          </div>
+          <div
+            id="machismoMessage"
+            class="text-left text-[32px] md:text-[40px]"
+          >
+            <p class="m-0 pt-0">
               Actitud o manera de pensar de quien sostiene que el hombre es por
               naturaleza superior a la mujer. Se puede encontrar donde sea que
               ay latinos pero más prominentemente en Latino America forzado por
               una
-              <span style="color: red">cultura que siempre a mantenido</span>
+              <span class="text-red-600">cultura que siempre a mantenido</span>
               que la mujer es menor que el hombre <br />
               <br />Attitude or way of thinking of those who maintain that man
               is by nature superior to woman. It is found wherever latinos are
               but most prominently in Latin America, enforced by a
-              <span style="color: red">culture that has always maintained</span>
+              <span class="text-red-600"
+                >culture that has always maintained</span
+              >
               that a women is lesser to a man.
             </p>
           </div>
-
-          <div class="title" id="misoginiaDiv">MISOGINIA</div>
-          <div id="misoginiaMessage">
-            <p class="message">
+          <div
+            class="text-[84px] font-['Teko'] text-left font-black hover:scale-[1.02] hover:text-[#bf281d] transition-all duration-200 cursor-pointer animate-menu-three"
+            id="misoginiaDiv"
+          >
+            MISOGINIA
+          </div>
+          <div
+            id="misoginiaMessage"
+            class="text-left text-[36px] md:text-[48px]"
+          >
+            <p class="m-0 pt-0">
               la misoginia es el
-              <span style="color: red"
+              <span class="text-red-600"
                 >rechazo, odio o prejuicio hacia las mujeres</span
               >
               producto de diferentes causas como la creencia de que la mujer es
               el sexo débil e inferior con respecto al sexo masculino<br />
-
               <br />misogyny is the
-              <span style="color: red"
+              <span class="text-red-600"
                 >rejection, hatred or prejudice towards women</span
-              >. It is the product of different causes as the belief that women
+              >
+              . It is the product of different causes as the belief that women
               are the weaker and inferior sex with respect to the male sex.
-            </p>
-          </div>
-
-          <div class="title" id="mataDiv">MATA</div>
-          <div id="mataMessage">
-            <p class="message">
-              La muerte violenta de las mujeres por razones de género,
-              tipificada en nuestro sistema penal como
-              <span style="color: red"
-                >feminicidio, es la forma más extrema de violencia contra la
-                mujer</span
-              >
-              y una de las manifestaciones más graves de la discriminación hacia
-              ellas.<br />
-
-              <br />The violent murder of women for reasons of gender,
-              classified in our penal system as
-              <span style="color: red"
-                >femicide, is the most extreme form of violence</span
-              >
-              against women and one of the most serious manifestations of
-              discrimination against them.
-            </p>
-          </div>
-
-          <div class="title" id="mujeresDiv">MUJERES</div>
-          <div id="mujeresMessage">
-            <p class="message">
-              Mujeres son victimas de Machismo y Misoginia en Latino America,
-              por generaciones han sido maltratadas, abusadas, violadas e
-              incluso asesinadas porque no se valora la vida de una mujer lo
-              mismo como un hombre. Ay mucho trabajo que hacer para asegurarnos
-              que este manera de pensar para de ser normalizado. Necesitamos
-              <span style="color: red">responsabilizar a los hombres</span> por
-              su continua negligencia de lo peor que trae el machismo. Este
-              proyecto es para poner atencion a la pelea de resitencia de
-              mujeres en Latino America.<br />
-
-              <br />Women are victims of machismo and misogyny in Latin America,
-              for generations they've been mistreated, abused, violated and even
-              killed due to a woman's life not being valued the same as a man's
-              life. There's a lot of work to do to ensure this way of thinking
-              stops being normalized. We need to
-              <span style="color: red">keep men accountable</span> for their
-              continued negligence towards the worst that machismo brings. This
-              project was made to bring attention to the fight of resistence of
-              women in Latin America.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="gallery">
+      <div
+        class="mt-[5vh] flex flex-col lg:ml-[15vw] xl:ml-[10vw] 2xl:ml-[8vw]"
+      >
         <img
-          class="photo"
+          class="p-[1vh] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.02] lg:mb-[20vh]"
           id="power"
           src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2FBeLatina_Latinx_Machismo.jpg?v=1638415048827"
           alt="beLatina.jpg"
         />
-        <div id="powerQuote">
-          <p class="message">
+
+        <div
+          id="powerQuote"
+          class="text-left lg:text-center text-[24px] lg:text-[40px] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto py-[5vh] px-[2vw] cursor-pointer lg:h-[65vh] lg:mb-[10vh]"
+        >
+          >
+          <p class="m-0">
             "It is through these consistent collective global waves of
-            <span style="color: grey">resistance</span> that our generation is
+            <span class="text-gray-500">resistance</span> that our generation is
             sparking conversations, which ultimately will help break these
             traumatic and negative patterns. It is pushing equality in spaces
             that still allow machismo or #MeToo stories to
-            <span style="color: grey">flourish</span> without punishment."
+            <span class="text-gray-500">flourish</span> without punishment."
           </p>
           <br />
           -
           <a
-            class="quoteLink"
+            class="text-red-600"
             href="https://belatina.com/fighting-global-machismo-and-pushing-for-equality/"
             target="_blank"
           >
-            Can Machismo Be Eradicated? By Jeanette Hernandez</a
-          >
+            Can Machismo Be Eradicated? By Jeanette Hernandez
+          </a>
         </div>
-
         <img
-          class="photo"
+          class="p-[1vh] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.02] lg:mb-[20vh]"
           id="domesticViolence"
           src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2Fdomestic_abuse_Machismo2.jpg?v=1638444401330"
           alt="domesticAbuse.jpg"
         />
-        <div id="domesticQuote">
-          <p class="message">
+        <div
+          id="domesticQuote"
+          class="text-left lg:text-center text-[24px] lg:text-[40px] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto py-[5vh] px-[2vw] cursor-pointer lg:h-[65vh] lg:mb-[10vh]"
+        >
+          <p class="m-0">
             "Femicide is often preceded by other unreported and unpunished
-            crimes such as <span style="color: grey">physical</span> or
-            <span style="color: grey">psychological violence</span> and
-            <span style="color: grey">sexual abuse</span>. In Latin America,
+            crimes such as <span class="text-gray-500">physical</span> or
+            <span class="text-gray-500">psychological violence</span> and
+            <span class="text-gray-500">sexual abuse</span>. In Latin America,
             women are most likely to be killed by their intimate partners or
-            relatives. Even on official record, partner or ex-partner is often
-            identified as the most common perpetrator, as in Argentina and Peru.
-            Certain social circumstances may also substantially increase case
-            occurrence. In the context of the COVID-19 pandemic, for example,
-            domestic violence and sexual abuse reports surged since the lockdown
-            imposed in many countries across the region, particularly in
-            Colombia and Chile."
+            relatives..."
           </p>
           <br />
           -
           <a
-            class="quoteLink"
+            class="text-red-600"
             href="https://www.statista.com/topics/6437/femicide-in-latin-america/#dossierKeyfigures"
             target="_blank"
           >
             Femicide in Latin America – Statistics & Facts Published by Teresa
-            Romero, Aug 4, 2021</a
-          >
+            Romero, Aug 4, 2021
+          </a>
         </div>
-
         <img
-          class="photo"
+          class="p-[1vh] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.02] lg:mb-[20vh]"
           id="protests"
           src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2FfemicideMachismo.jpg?v=1638444137717"
           alt="femicideProtests.jpg"
         />
-        <div id="protestsQuote">
-          <p class="message">
-            "On February 9, 2020—only days before Valentine’s
+        <div
+          id="protestsQuote"
+          class="text-left lg:text-center text-[24px] lg:text-[40px] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto py-[5vh] px-[2vw] cursor-pointer lg:h-[65vh] lg:mb-[10vh]"
+        >
+          <p class="m-0">
+            "On February 9, 2020—only days before Valentine's
             Day—twenty-five-year-old Ingrid Escamilla was murdered by her
-            partner in Mexico. Photos of her body were splattered on newspapers
-            across the country. Days later, seven-year-old Fatima Aldriguett
-            Antón was tortured and killed, further sparking outrage. Thousands
-            of protestors took to the streets in response to these
-            killings—outside Mexico’s presidential palace"... "Calls for action
-            are growing louder; the
-            <span style="color: grey">protests</span> are calling attention to
-            the Mexican government’s failure to release any plan to prevent
-            <span style="color: grey">femicides</span>, as well as to the
-            media’s coverage of the issue, which they say gives too much space
-            to the abuser’s testimony and not enough respect to the victim’s
-            life and body."
+            partner in Mexico..."
           </p>
           <br />
           -
           <a
-            class="quoteLink"
+            class="text-red-600"
             href="https://www.atlanticcouncil.org/content-series/diversity-equity-inclusion/women-protest-for-their-lives-fighting-femicide-in-latin-america/"
             target="_blank"
           >
@@ -209,106 +420,166 @@
             Isabel Kennon and Grace Valdevitt
           </a>
         </div>
-
         <img
-          class="photo"
+          class="p-[1vh] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.02] lg:mb-[20vh]"
           id="family"
           src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2Flatin_family_Machismo.jpg?v=1638415053348"
           alt="latinFamily.jpg"
         />
-        <div id="familyQuote">
-          <p class="message">
-            "Here’s the truth: People evolve. Relationships evolve. Families
-            evolve. And cultures evolve. As the saying goes, the only constant
-            is <span style="color: grey">change</span>. If our goal is to raise
-            children who are healthily connected to themselves, to others and to
-            their first mother, Madre Tierra, then we have to
-            <span style="color: grey">acknowledge</span> the changes that need
-            to occur in order for that to happen. I can promise that building a
-            new world will take more than just our generation. But we are
-            passionate, hard-working, and resilient and can plant new seeds in
-            the garden of our own familias"
+        <div
+          id="familyQuote"
+          class="text-left lg:text-center text-[24px] lg:text-[40px] w-[80vw] lg:w-[40vw] max-w-[800px] mx-auto py-[5vh] px-[2vw] cursor-pointer lg:h-[65vh] lg:mb-[10vh]"
+        >
+          <p class="m-0">
+            "Here's the truth: People evolve. Relationships evolve. Families
+            evolve..."
           </p>
           <br />
           -
           <a
-            class="quoteLink"
+            class="text-red-600"
             href="https://www.sheknows.com/parenting/articles/2485851/raising-latinx-children-machismo-homophobia-culture/"
             target="_blank"
           >
-            I’m Eschewing the Machismo, Homophobia & Other Toxicities of My
-            Cultura & Raising My Kids Differently By Leslie Priscilla</a
-          >
+            I'm Eschewing the Machismo, Homophobia & Other Toxicities of My
+            Cultura & Raising My Kids Differently By Leslie Priscilla
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="bottomMessage">
-      <div class="bottomDiv">
-        <div class="bottomQuote" id="bottomQuote1">"Asi Era en mi casa"</div>
-        <div class="bottomQuoteEn" id="bottomQuoteEn1">
-          "That's how it was growing up in my house"
-        </div>
-        <div class="bottomQuoteTwo" id="bottomQuote2">
-          "Ellas se los buscan"
-        </div>
-        <div class="bottomQuoteEnTwo" id="bottomQuoteEn2">
-          "They're asking for it"
-        </div>
-        <div class="bottomQuote" id="bottomQuote3">"Ni un piropo aguantan"</div>
-        <div class="bottomQuoteEn" id="bottomQuoteEn3">
-          "Can't even compliment them"
+    <div class="flex justify-center w-full">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-row items-center justify-center gap-x-[5vw] h-[40vh] md:h-[60vh] lg:h-[102vh] my-[10vh] lg:my-0"
+        >
+          <div
+            class="bottomDiv flex-shrink-0 w-[25vw] hmax-w-[300px] w-full lg:w-[20vw]"
+          >
+            <div
+              id="bottomQuote1"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer animate-quoteOptions"
+            >
+              "Asi Era en mi casa"
+            </div>
+            <div
+              id="bottomQuoteEn1"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "That's how it was growing up in my house"
+            </div>
+            <div
+              id="bottomQuote2"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer animate-quoteOptions2"
+            >
+              "Ellas se los buscan"
+            </div>
+            <div
+              id="bottomQuoteEn2"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "They're asking for it"
+            </div>
+            <div
+              id="bottomQuote3"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer animate-quoteOptions"
+            >
+              "Ni un piropo aguantan"
+            </div>
+            <div
+              id="bottomQuoteEn3"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "Can't even compliment them"
+            </div>
+            <div
+              id="bottomQuote4"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer animate-quoteOptions2"
+            >
+              "las mujeres no trabajan"
+            </div>
+            <div
+              id="bottomQuoteEn4"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "Women don't work"
+            </div>
+          </div>
+          <img
+            id="mainPhoto"
+            src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2FtuMachismoNosMataV.png?v=1638526897487"
+            alt="Main photo"
+            class="w-[40vw] md:w-[30vw] lg:w-[40vw] my-[8vh] transition-transform duration-200 ease-in-out hover:scale-105 cursor-pointer"
+          />
+          <div class="bottomDiv flex-shrink-0 w-[25vw] h-full lg:w-[20vw]">
+            <div
+              id="bottomQuote6"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer animate-quoteOptions2"
+            >
+              "feminazis"
+            </div>
+            <div
+              id="bottomQuoteEn6"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "feminazis"
+            </div>
+            <div
+              id="bottomQuote7"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer animate-quoteOptions"
+            >
+              "Anda a la cocina"
+            </div>
+            <div
+              id="bottomQuoteEn7"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "go to the kitchen"
+            </div>
+            <div
+              id="bottomQuote8"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer animate-quoteOptions2"
+            >
+              "la ropa pequeña es para provocarnos"
+            </div>
+            <div
+              id="bottomQuoteEn8"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:mr-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "tight clothes are provocative to men"
+            </div>
+            <div
+              id="bottomQuote9"
+              class="text-[12px] md:text-[24px] lg:text-[48px] font-teko text-center font-medium mt-[5vh] mb-[15vw] lg:mt-[10vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer animate-quoteOptions"
+            >
+              "No soy machista porque tengo Mama, hermana, y novia"
+            </div>
+            <div
+              id="bottomQuoteEn9"
+              class="text-[12px] md:text-[24px] lg:text-[45px] font-teko text-center font-medium mt-[5vh] mb-[5vh] lg:mt-[8vh] lg:mb-[8vh] lg:ml-[3vw] w-full cursor-pointer text-red-500 hover:text-red-500 animate-menuOptions"
+            >
+              "I'm not a mysogonist, I have/love my: mom/sister/girlfriend"
+            </div>
+          </div>
         </div>
 
-        <div class="bottomQuoteTwo" id="bottomQuote4">
-          "las mujeres no trabajan"
-        </div>
-        <div class="bottomQuoteEnTwo" id="bottomQuoteEn4">
-          "Women don't work"
-        </div>
-      </div>
-      <img
-        id="mainPhoto"
-        src="https://cdn.glitch.me/0140165a-c04e-4ec5-bba1-5455c23ab987%2FtuMachismoNosMataV.png?v=1638526897487"
-      />
-
-      <div class="bottomDiv">
-        <div class="bottomQuoteTwo" id="bottomQuote6">"feminazis"</div>
-        <div class="bottomQuoteEnTwo" id="bottomQuoteEn6">"feminazis"</div>
-
-        <div class="bottomQuote" id="bottomQuote7">"Anda a la cocina"</div>
-        <div class="bottomQuoteEn" id="bottomQuoteEn7">"go to the kitchen"</div>
-
-        <div class="bottomQuoteTwo" id="bottomQuote8">
-          "la ropa pequeña es para provocarnos"
-        </div>
-        <div class="bottomQuoteEnTwo" id="bottomQuoteEn8">
-          "tight clothes are provocative to men"
-        </div>
-
-        <div class="bottomQuote" id="bottomQuote9">
-          "No soy machista porque tengo Mama, hermana, y novia"
-        </div>
-        <div class="bottomQuoteEn" id="bottomQuoteEn9">
-          "I'm not a mysogonist, I have/love my: mom/sister/girlfriend"
-        </div>
-      </div>
-
-      <div id="femicideVideo">
-        <div id="videoExit">back / atras</div>
-
-        <div class="iframe-container">
-          <iframe
-            width="1280"
-            height="720"
-            src="https://www.youtube.com/embed/NUaQD73KM0Q"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; 
-                clipboard-write; encrypted-media; gyroscope; 
-                picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div id="femicideVideo" class="mx-auto my-[8vh]">
+          <div
+            id="videoExit"
+            class="text-red-500 text-[32px] underline text-left w-[85vw] p-[1vw] cursor-pointer"
+          >
+            back / atras
+          </div>
+          <div class="relative w-full pb-[56.25%] h-0">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/NUaQD73KM0Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
