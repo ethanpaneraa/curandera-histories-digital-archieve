@@ -1,49 +1,55 @@
 $(
-  "#machismoMessage, #misoginiaMessage, #mataMessage, #mujeresMessage, #back,#powerQuote,#domesticQuote,#protestsQuote,#familyQuote,#femicideVideo,#videoExit, #bottomQuoteEn1, #bottomQuoteEn2,#bottomQuoteEn3,#bottomQuoteEn4,#bottomQuoteEn5,#bottomQuoteEn6,#bottomQuoteEn7,#bottomQuoteEn8,#bottomQuoteEn9"
+  "#machismoMessage, #misoginiaMessage, #generoMessage, #trabajoMessage, #back,#powerQuote,#domesticQuote,#protestsQuote,#familyQuote,#femicideVideo,#videoExit, #bottomQuoteEn1, #bottomQuoteEn2,#bottomQuoteEn3,#bottomQuoteEn4,#bottomQuoteEn5,#bottomQuoteEn6,#bottomQuoteEn7,#bottomQuoteEn8,#bottomQuoteEn9, #generoMessage, #trabajoMessage, #resistenciaMessage"
 ).hide();
 
 $("#machismoDiv").click(function () {
-  $("#machismoDiv,#misoginiaDiv, #mataDiv, #mujeresDiv").fadeOut(
-    200,
-    function () {
-      $("#back,#machismoMessage").fadeIn(200);
-    }
-  );
+  $(
+    "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+  ).fadeOut(200, function () {
+    $("#back,#machismoMessage").fadeIn(200);
+  });
 });
 
 $("#back").click(function () {
   $(
-    "#back, #machismoMessage, #misoginiaMessage, #mataMessage, #mujeresMessage"
+    "#back, #machismoMessage, #misoginiaMessage, #generoMessage, #trabajoMessage, #resistenciaMessage"
   ).fadeOut(0, function () {
-    $("#machismoDiv,#misoginiaDiv, #mataDiv, #mujeresDiv").fadeIn(200);
+    $(
+      "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+    ).fadeIn(200);
   });
 });
 
 $("#misoginiaDiv").click(function () {
-  $("#machismoDiv,#misoginiaDiv, #mataDiv, #mujeresDiv").fadeOut(
-    200,
-    function () {
-      $("#back,#misoginiaMessage").fadeIn(200, function () {});
-    }
-  );
+  $(
+    "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+  ).fadeOut(200, function () {
+    $("#back,#misoginiaMessage").fadeIn(200, function () {});
+  });
 });
 
-$("#mataDiv").click(function () {
-  $("#machismoDiv,#misoginiaDiv, #mataDiv, #mujeresDiv").fadeOut(
-    200,
-    function () {
-      $("#back,#mataMessage").fadeIn(200, function () {});
-    }
-  );
+$("#generoDiv").click(function () {
+  $(
+    "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+  ).fadeOut(200, function () {
+    $("#back,#generoMessage").fadeIn(200, function () {});
+  });
 });
 
-$("#mujeresDiv").click(function () {
-  $("#machismoDiv,#misoginiaDiv, #mataDiv, #mujeresDiv").fadeOut(
-    200,
-    function () {
-      $("#back,#mujeresMessage").fadeIn(200, function () {});
-    }
-  );
+$("#trabajoDiv").click(function () {
+  $(
+    "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+  ).fadeOut(200, function () {
+    $("#back,#trabajoMessage").fadeIn(200, function () {});
+  });
+});
+
+$("#resistenciaDiv").click(function () {
+  $(
+    "#machismoDiv,#misoginiaDiv, #generoDiv, #trabajoDiv, #resistenciaDiv"
+  ).fadeOut(200, function () {
+    $("#back,#resistenciaMessage").fadeIn(200, function () {});
+  });
 });
 
 $("#power").click(function () {
